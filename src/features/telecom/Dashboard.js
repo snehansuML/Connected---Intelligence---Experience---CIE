@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import telecomConfig from "../../config/telecomConfig";
 import SidebarCard from "./components/Sidebar";
 import ChartCard from "./components/ChartCard";
@@ -7,78 +7,48 @@ import CsvUploader from "./components/CsvUploader";
 import GPTInsights from "./components/GPTInsights";
 import BatchPrediction from "./components/BatchPrediction";
 import ChurnMap from "./components/ChurnMap";
-import ChartBuilder from "./components/ChartBuilder_MultiMetric";
-import segmentationData from "../../data/segmentationData.json";
+import ChartBuilder from "./components/ChartBuilder";
 import MarketingInsights from "./components/MarketingInsights";
 
 export default function Dashboard() {
   const [activeView, setActiveView] = useState("Marketing Insights");
+  const [riskData, setRiskData] = useState({});
+  const [segmentationData, setSegmentationData] = useState({});
 
-  const dummyMetrics = {
-    customerChurn: 1869,
-    yearlyCharges: 16060000,
-    monthlyCharges: 456120,
-    adminTickets: 3632,
-    techTickets: 2955
+  useEffect(() => {
+    fetch("/data/riskProfiles.json")
+      .then(res => res.json())
+      .then(setRiskData)
+      .catch(err => console.error("Failed to load riskProfiles.json", err));
+
+    fetch("/data/segmentationData.json")
+      .then(res => res.json())
+      .then(setSegmentationData)
+      .catch(err => console.error("Failed to load segmentationData.json", err));
+  }, []);
+
+  const [metrics, setMetrics] = useState({});
+
+useEffect(() => {
+  fetch("/data/Metrics.json")
+    .then(res => res.json())
+    .then(setMetrics)
+    .catch(err => console.error("Failed to load Metrics.json", err));
+}, []);
+
+ 
+  const riskColors = {
+    "Plan Risk Levels": "#f44336",
+    "Geographic Risk": "#FB8C00",
+    "Behavioral Risk": "#6A1B9A",
+    "Contract Risk": "#1976D2",
+    "Billing Risk": "#C62828",
+    "Service Risk": "#00897B",
+    "Support Risk": "#7B1FA2",
+    "Device Risk": "#455A64"
   };
 
-  const dummyData = {
-    paymentMethod: [
-      { name: "Credit Card", value: 45 },
-      { name: "Bank Transfer", value: 20 }
-    ]
-  };
-
-  const planRiskLevels = [
-    { name: "Prepaid - Low", value: 20 },
-    { name: "Prepaid - Med", value: 25 },
-    { name: "Prepaid - High", value: 15 },
-    { name: "Postpaid - Low", value: 10 },
-    { name: "Postpaid - Med", value: 20 },
-    { name: "Postpaid - High", value: 10 }
-  ];
-
-  const geoRiskLevels = [
-    { name: "Urban Complaints", value: 80 },
-    { name: "Rural Tenure Risk", value: 20 }
-  ];
-  const behavioralRiskLevels = [
-    { name: "Frequent Complaints", value: 50 },
-    { name: "Short Tenure", value: 40 },
-    { name: "Low Engagement", value: 10 }
-  ];
-
-  const contractRisk = [
-    { name: "Month-to-Month", value: 45 },
-    { name: "1-Year", value: 30 },
-    { name: "2-Year", value: 10 }
-  ];
-
-  const billingRisk = [
-    { name: "Overcharged", value: 20 },
-    { name: "Late Bills", value: 15 },
-    { name: "Frequent Queries", value: 10 }
-  ];
-
-  const serviceRisk = [
-    { name: "Streaming + Data", value: 28 },
-    { name: "TV Only", value: 12 },
-    { name: "Bundled (Phone + TV + Internet)", value: 8 }
-  ];
-
-  const supportRisk = [
-    { name: "3+ Complaints", value: 40 },
-    { name: "No Complaints", value: 10 },
-    { name: "Resolved Quickly", value: 5 }
-  ];
-
-  const deviceRisk = [
-    { name: "Old Modem (>3 yrs)", value: 18 },
-    { name: "Frequent Replacements", value: 12 },
-    { name: "New Setup", value: 5 }
-  ];
-
-  const additionalTabs = ["Market Simulations", "Chart Builder", "Marketing Insights"];
+  const additionalTabs = ["Market Simulations","Batch Prediction", "Chart Builder", "Marketing Insights"];
 
   return (
     <div style={{ display: "flex", minHeight: "100vh", backgroundColor: "#f4f6f8" }}>
@@ -87,12 +57,12 @@ export default function Dashboard() {
           <SidebarCard
             key={index}
             title={item.title}
-            value={dummyMetrics[item.key]}
+            value={metrics[item.key]}
             isCurrency={item.isCurrency}
           />
         ))}
       </aside>
-
+  
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <header style={{ backgroundColor: "#003366", padding: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center", color: "white" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
@@ -134,24 +104,19 @@ export default function Dashboard() {
         </header>
 
         <main style={{ flex: 1, padding: "1.5rem", overflowY: "auto" }}>
-          {activeView === "Customer Churn" && (
-            <>
-              <ChartCard title="Churn by Year" data={dummyData.churnByYear} barColor="#FFA726" />
-              <ChartCard title="Payment Method" data={dummyData.paymentMethod} barColor="#FB8C00" />
-            </>
-          )}
-
+      
           {activeView === "Customer Risk" && (
             <>
               <ChurnMap />
-              <ChartCard title="Plan Risk Levels" data={planRiskLevels} barColor="#f44336" />
-              <ChartCard title="Geographic Risk" data={geoRiskLevels} barColor="#FB8C00" />
-              <ChartCard title="Behavioral Risk" data={behavioralRiskLevels} barColor="#6A1B9A" />
-              <ChartCard title="Contract Risk" data={contractRisk} barColor="#1976D2" />
-              <ChartCard title="Billing Risk" data={billingRisk} barColor="#C62828" />
-              <ChartCard title="Service Risk" data={serviceRisk} barColor="#00897B" />
-              <ChartCard title="Support Risk" data={supportRisk} barColor="#7B1FA2" />
-              <ChartCard title="Device Risk" data={deviceRisk} barColor="#455A64" />
+              {Object.entries(riskData).map(([title, data], index) => (
+                <ChartCard
+                  key={index}
+                  title={title}
+                  data={data}
+                  
+                  barColor={riskColors[title] || "#FB8C00"}
+                />
+              ))}
             </>
           )}
 
@@ -170,7 +135,7 @@ export default function Dashboard() {
             </>
           )}
 
-          {activeView === "Customer Segments" && (
+{activeView === "Customer Segments" && (
             <>
               <h3 style={{ marginBottom: "1rem", fontWeight: "bold" }}>Customer Segments</h3>
               {Object.entries(telecomConfig.chartConfigs.segments).map(([key, config], index) => (
@@ -184,20 +149,14 @@ export default function Dashboard() {
             </>
           )}
 
-          {activeView === "Marketing Insights" && (
-            <MarketingInsights />
-          )}
-
+          {activeView === "Marketing Insights" && <MarketingInsights />}
           {activeView === "Batch Prediction" && (
             <div style={{ paddingTop: "2rem", borderTop: "2px solid #ccc", marginTop: "2rem" }}>
               <h3 style={{ marginBottom: "1rem", fontWeight: "bold" }}>Batch Prediction Upload</h3>
               <BatchPrediction />
             </div>
           )}
-
-          {activeView === "Chart Builder" && (
-            <ChartBuilder />
-          )}
+          {activeView === "Chart Builder" && <ChartBuilder />}
         </main>
       </div>
     </div>

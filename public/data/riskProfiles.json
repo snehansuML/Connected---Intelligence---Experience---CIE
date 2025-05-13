@@ -1,0 +1,122 @@
+{
+  "Plan Risk Levels": [
+    {
+      "name": "Prepaid - Low",
+      "value": 20
+    },
+    {
+      "name": "Prepaid - Med",
+      "value": 25
+    },
+    {
+      "name": "Prepaid - High",
+      "value": 15
+    },
+    {
+      "name": "Postpaid - Low",
+      "value": 10
+    },
+    {
+      "name": "Postpaid - Med",
+      "value": 20
+    },
+    {
+      "name": "Postpaid - High",
+      "value": 10
+    }
+  ],
+  "Geographic Risk": [
+    {
+      "name": "Urban Complaints",
+      "value": 80
+    },
+    {
+      "name": "Rural Tenure Risk",
+      "value": 20
+    }
+  ],
+  "Behavioral Risk": [
+    {
+      "name": "Frequent Complaints",
+      "value": 50
+    },
+    {
+      "name": "Short Tenure",
+      "value": 40
+    },
+    {
+      "name": "Low Engagement",
+      "value": 10
+    }
+  ],
+  "Contract Risk": [
+    {
+      "name": "Month-to-Month",
+      "value": 45
+    },
+    {
+      "name": "1-Year",
+      "value": 30
+    },
+    {
+      "name": "2-Year",
+      "value": 10
+    }
+  ],
+  "Billing Risk": [
+    {
+      "name": "Overcharged",
+      "value": 20
+    },
+    {
+      "name": "Late Bills",
+      "value": 15
+    },
+    {
+      "name": "Frequent Queries",
+      "value": 10
+    }
+  ],
+  "Service Risk": [
+    {
+      "name": "Streaming + Data",
+      "value": 28
+    },
+    {
+      "name": "TV Only",
+      "value": 12
+    },
+    {
+      "name": "Bundled (Phone + TV + Internet)",
+      "value": 8
+    }
+  ],
+  "Support Risk": [
+    {
+      "name": "3+ Complaints",
+      "value": 40
+    },
+    {
+      "name": "No Complaints",
+      "value": 10
+    },
+    {
+      "name": "Resolved Quickly",
+      "value": 5
+    }
+  ],
+  "Device Risk": [
+    {
+      "name": "Old Modem (>3 yrs)",
+      "value": 18
+    },
+    {
+      "name": "Frequent Replacements",
+      "value": 12
+    },
+    {
+      "name": "New Setup",
+      "value": 5
+    }
+  ]
+}

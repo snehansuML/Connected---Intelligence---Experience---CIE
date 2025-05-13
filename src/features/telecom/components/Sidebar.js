@@ -2,8 +2,10 @@ import React from "react";
 
 export default function SidebarCard({ title, value, isCurrency }) {
   const formatValue = () => {
-    if (isCurrency) return `$${value.toLocaleString()}`;
-    return value.toLocaleString();
+    if (value === undefined || value === null) return "—";
+    return isCurrency ? "$" + value.toLocaleString() : value.toLocaleString();
+  
+  
   };
 
   return (

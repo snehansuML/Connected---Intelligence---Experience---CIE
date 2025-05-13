@@ -1,5 +1,5 @@
 const telecomConfig = {
-  appTitle: "Telecom Insights",
+  appTitle: "Teleco Insights",
   logoPath: "/logos/telecom.svg",
 
   // Sidebar metrics
