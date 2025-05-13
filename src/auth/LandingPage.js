@@ -8,7 +8,7 @@ export default function LandingPage() {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f4f6f8", padding: "3rem" }}>
       <h1 style={{ textAlign: "center", fontSize: "2rem", marginBottom: "1rem", color: "#0f62fe" }}>
-        Connected Intelligence Expereinces - CIE
+        Connected Intelligence Experiences - CIE
       </h1>
       <p style={{ textAlign: "center", fontSize: "1.1rem", marginBottom: "2rem" }}>
         Select a vertical to explore customer insights
