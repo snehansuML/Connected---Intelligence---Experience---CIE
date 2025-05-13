@@ -1,0 +1,6 @@
+tenure_months,monthly_charges,total_charges,complaints,contract_type,payment_method
+12,65.0,780.0,1,Month-to-month,Electronic
+36,90.5,2900.0,2,Two year,Mailed
+18,75.0,1350.0,0,One year,Bank Transfer
+24,70.0,1680.0,1,Month-to-month,Electronic
+48,80.0,3840.0,3,Two year,Mailed

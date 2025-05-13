@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Low",
+    "value": 50
+  },
+  {
+    "name": "Medium",
+    "value": 30
+  },
+  {
+    "name": "High",
+    "value": 20
+  }
+]

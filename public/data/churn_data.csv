@@ -1,0 +1,301 @@
+gender,tenure_months,monthly_charges,total_charges,contract_type,payment_method,risk_level,complaints,churned
+Male,1,82.5,1309.51,Month-to-Month,Electronic,Low,3,0
+Female,19,29.08,2337.45,Month-to-Month,Electronic,Low,0,0
+Male,2,94.47,5566.05,Month-to-Month,Electronic,Low,3,0
+Male,53,97.94,4357.42,One year,Electronic,High,2,0
+Male,44,99.67,383.76,One year,Mailed,Medium,2,0
+Female,32,24.47,4710.94,One year,Electronic,High,3,0
+Male,70,78.96,4984.85,Month-to-Month,Mailed,High,4,1
+Male,32,63.67,4527.96,Month-to-Month,Mailed,Medium,4,0
+Male,68,76.47,4817.27,Month-to-Month,Mailed,Low,5,0
+Female,55,97.49,4968.28,One year,Mailed,Low,2,0
+Male,56,75.04,1199.79,Month-to-Month,Electronic,High,1,0
+Male,17,86.96,1490.58,One year,Electronic,Low,5,0
+Male,38,89.35,3839.18,One year,Mailed,High,4,1
+Male,24,87.08,5456.41,Month-to-Month,Mailed,High,3,0
+Female,69,54.09,1965.56,Month-to-Month,Electronic,Medium,4,0
+Male,70,37.81,3571.01,One year,Mailed,Medium,3,0
+Female,11,51.73,4129.59,Month-to-Month,Electronic,Medium,5,0
+Female,16,91.35,2766.5,One year,Mailed,High,2,0
+Female,59,31.73,4311.32,Month-to-Month,Electronic,Medium,4,0
+Male,70,61.07,5408.04,Month-to-Month,Mailed,Low,3,0
+Female,3,38.66,3782.2,One year,Mailed,Low,2,0
+Male,20,66.5,3284.71,Month-to-Month,Electronic,High,1,0
+Female,59,89.05,2688.59,One year,Mailed,High,3,0
+Female,36,90.43,3507.17,Month-to-Month,Mailed,Medium,5,1
+Female,19,38.93,2196.64,One year,Electronic,High,1,1
+Female,67,92.62,2409.74,One year,Mailed,High,1,1
+Female,19,67.35,3237.96,Month-to-Month,Electronic,Low,0,0
+Female,20,48.02,493.05,One year,Electronic,Low,4,0
+Female,71,76.65,1451.25,Month-to-Month,Mailed,Medium,3,0
+Female,52,58.53,3302.81,Month-to-Month,Mailed,High,1,0
+Male,33,50.24,2646.02,Month-to-Month,Mailed,High,0,0
+Male,40,76.41,2063.61,One year,Mailed,Low,5,0
+Female,39,39.9,4410.24,One year,Mailed,High,2,0
+Female,1,46.42,4192.93,Month-to-Month,Mailed,Low,3,1
+Female,11,54.76,1083.71,Month-to-Month,Mailed,Medium,1,0
+Male,57,40.29,5283.91,One year,Electronic,Low,4,0
+Female,50,52.42,3023.0,Month-to-Month,Mailed,High,0,0
+Male,23,65.72,4474.62,Month-to-Month,Electronic,Medium,1,1
+Male,31,79.28,3481.59,One year,Mailed,Low,4,0
+Male,42,81.38,5986.39,Month-to-Month,Mailed,Low,1,0
+Male,7,85.82,4539.18,One year,Electronic,Medium,3,0
+Male,16,79.54,4271.18,Month-to-Month,Mailed,Medium,3,0
+Female,60,74.48,4693.57,One year,Mailed,Low,3,0
+Female,2,39.0,944.46,Month-to-Month,Electronic,High,5,1
+Female,1,52.02,1306.81,Month-to-Month,Mailed,Low,5,0
+Female,48,58.22,4312.98,One year,Mailed,Medium,0,0
+Female,12,26.63,3014.49,Month-to-Month,Mailed,Low,3,0
+Male,69,62.27,4552.35,One year,Electronic,Medium,4,0
+Female,37,54.91,707.2,Month-to-Month,Mailed,Medium,1,0
+Female,32,84.17,3265.24,One year,Mailed,High,2,0
+Male,9,98.23,2335.05,One year,Mailed,Medium,4,0
+Female,19,64.48,2796.3,One year,Mailed,Medium,5,0
+Male,48,45.81,3663.35,One year,Electronic,High,5,0
+Female,3,23.47,3063.5,Month-to-Month,Electronic,Medium,4,0
+Male,20,93.97,3285.18,Month-to-Month,Mailed,High,5,0
+Female,24,93.53,2969.51,One year,Mailed,High,3,1
+Female,54,40.24,2512.84,One year,Electronic,Medium,0,0
+Male,33,75.63,4654.1,One year,Electronic,Medium,1,0
+Male,24,26.03,172.0,Month-to-Month,Mailed,Low,0,1
+Male,36,33.3,3630.81,Month-to-Month,Electronic,High,1,0
+Male,38,37.34,3436.5,Month-to-Month,Mailed,Low,1,1
+Male,25,43.56,4325.46,Month-to-Month,Electronic,Medium,0,0
+Male,18,99.67,3634.27,One year,Electronic,Low,4,1
+Male,66,75.75,4978.11,One year,Electronic,High,1,0
+Male,54,50.74,5758.54,One year,Electronic,Low,0,0
+Female,35,78.97,2120.89,Month-to-Month,Mailed,High,1,0
+Female,61,93.22,1441.37,Month-to-Month,Electronic,Medium,2,1
+Male,41,96.7,2599.22,Month-to-Month,Electronic,Medium,4,1
+Female,33,24.63,1798.78,One year,Mailed,High,3,0
+Female,68,51.56,3728.21,One year,Electronic,Medium,1,0
+Female,33,28.54,5479.93,Month-to-Month,Electronic,Medium,2,1
+Female,14,46.85,920.79,One year,Mailed,Medium,3,0
+Male,21,33.57,694.69,Month-to-Month,Electronic,Medium,3,1
+Female,48,71.75,1610.49,Month-to-Month,Mailed,High,1,1
+Male,20,51.06,4383.96,One year,Mailed,Low,0,0
+Female,8,38.35,3598.48,Month-to-Month,Mailed,Low,1,0
+Female,7,41.28,703.05,One year,Mailed,Medium,2,0
+Female,67,48.83,5520.63,Month-to-Month,Electronic,Low,3,0
+Male,17,40.8,4761.5,One year,Mailed,Low,1,1
+Female,33,56.26,235.83,One year,Electronic,Medium,0,0
+Male,48,22.59,3943.07,One year,Electronic,Medium,1,1
+Female,59,42.38,4650.36,Month-to-Month,Electronic,Low,4,0
+Male,22,52.9,2309.17,Month-to-Month,Electronic,High,0,1
+Female,30,68.22,506.64,One year,Electronic,Medium,2,0
+Male,38,41.68,556.19,One year,Electronic,High,3,0
+Male,51,30.65,715.06,Month-to-Month,Electronic,Low,1,0
+Female,54,26.1,5058.59,Month-to-Month,Electronic,Medium,0,1
+Male,8,95.24,5473.05,Month-to-Month,Electronic,High,4,0
+Female,27,53.33,824.58,One year,Electronic,Medium,0,1
+Female,27,66.49,1491.85,Month-to-Month,Mailed,Low,5,0
+Female,21,93.53,1076.57,Month-to-Month,Mailed,High,4,0
+Female,30,26.62,1199.29,One year,Mailed,Low,2,0
+Female,28,90.13,5041.2,Month-to-Month,Electronic,Low,3,0
+Female,64,64.13,2059.66,Month-to-Month,Mailed,Medium,2,0
+Female,69,33.19,1937.52,Month-to-Month,Mailed,High,1,1
+Female,61,52.9,1441.63,One year,Mailed,Low,0,1
+Female,48,82.21,3686.58,One year,Electronic,Low,5,1
+Female,19,58.43,2337.9,One year,Electronic,High,4,1
+Female,4,98.82,4491.07,One year,Electronic,Low,4,0
+Male,35,50.14,1312.92,One year,Electronic,Low,0,0
+Male,64,79.97,4747.96,One year,Mailed,High,5,0
+Female,49,51.44,3661.96,One year,Mailed,High,0,1
+Female,17,86.33,774.18,Month-to-Month,Mailed,High,1,0
+Female,44,65.53,2545.58,Month-to-Month,Mailed,High,2,0
+Female,30,25.08,5194.76,One year,Electronic,Medium,4,0
+Female,46,22.95,5545.47,Month-to-Month,Electronic,High,1,0
+Female,6,30.71,2847.63,Month-to-Month,Electronic,Medium,2,1
+Female,37,21.09,2936.94,One year,Mailed,Medium,1,1
+Female,24,26.03,5518.88,Month-to-Month,Electronic,Medium,5,0
+Male,46,75.34,3563.7,Month-to-Month,Electronic,Low,4,1
+Female,53,62.75,293.8,Month-to-Month,Mailed,Medium,0,0
+Male,60,79.99,5485.22,Month-to-Month,Mailed,Medium,0,0
+Female,63,93.05,1564.54,Month-to-Month,Electronic,Low,2,0
+Female,32,66.81,3508.03,One year,Electronic,Low,3,0
+Male,33,78.09,1076.53,One year,Electronic,Low,5,0
+Female,67,80.57,299.89,One year,Electronic,High,2,1
+Male,18,50.23,1937.69,Month-to-Month,Electronic,Low,3,0
+Female,25,39.29,4704.92,One year,Electronic,Low,1,1
+Female,54,36.4,1737.76,Month-to-Month,Mailed,Medium,5,0
+Male,58,40.12,1398.57,Month-to-Month,Mailed,Low,1,0
+Female,67,41.98,1354.82,Month-to-Month,Mailed,High,4,0
+Male,46,36.58,3139.52,Month-to-Month,Electronic,Low,5,0
+Female,24,90.26,5855.69,One year,Mailed,High,3,0
+Male,32,80.56,2808.04,One year,Electronic,Low,4,1
+Male,47,23.75,3388.1,Month-to-Month,Electronic,Low,0,0
+Female,23,41.49,5177.73,One year,Mailed,Low,3,0
+Female,66,21.77,3256.91,Month-to-Month,Electronic,Low,2,0
+Male,27,59.85,1188.33,One year,Electronic,High,0,0
+Female,2,58.1,1867.62,One year,Mailed,High,0,0
+Female,17,86.51,1928.63,Month-to-Month,Mailed,Medium,2,0
+Female,33,44.62,2444.18,One year,Mailed,High,5,0
+Male,9,85.31,2618.05,Month-to-Month,Electronic,Low,0,0
+Male,43,97.44,4818.71,One year,Mailed,Medium,3,0
+Male,48,27.07,2161.38,Month-to-Month,Mailed,Medium,4,0
+Male,39,83.35,2862.57,Month-to-Month,Electronic,Medium,0,0
+Male,42,67.2,3787.36,One year,Mailed,Low,3,0
+Male,26,58.4,2328.58,One year,Mailed,High,1,1
+Male,50,53.64,5035.73,Month-to-Month,Mailed,Low,3,0
+Male,25,82.77,3565.98,One year,Electronic,Medium,4,0
+Male,24,71.15,1834.86,One year,Electronic,Low,3,0
+Female,13,84.4,4312.95,Month-to-Month,Electronic,Low,2,1
+Male,60,92.25,3213.12,Month-to-Month,Electronic,High,4,0
+Female,7,69.38,3253.29,One year,Mailed,High,5,0
+Female,57,98.44,2938.42,Month-to-Month,Electronic,Medium,1,1
+Female,36,68.65,3032.37,Month-to-Month,Electronic,Low,2,0
+Male,45,70.93,4615.6,Month-to-Month,Mailed,Low,5,0
+Male,20,64.39,707.59,One year,Mailed,High,3,0
+Male,65,27.28,2072.74,One year,Mailed,Low,4,0
+Male,8,78.11,545.47,Month-to-Month,Electronic,Low,1,1
+Female,16,63.8,4544.15,One year,Electronic,Low,2,1
+Male,14,56.07,1706.58,Month-to-Month,Electronic,High,5,0
+Male,15,92.84,5394.84,One year,Mailed,Medium,5,0
+Male,66,43.84,3206.81,Month-to-Month,Mailed,Medium,1,0
+Male,32,61.89,4824.42,Month-to-Month,Electronic,Low,3,0
+Male,63,75.81,5875.7,One year,Mailed,Medium,1,1
+Female,51,83.72,5054.75,Month-to-Month,Mailed,High,5,0
+Male,25,56.75,5215.26,One year,Mailed,High,0,0
+Female,58,87.37,2507.11,One year,Electronic,Medium,2,1
+Male,63,81.51,3355.16,Month-to-Month,Mailed,Medium,1,0
+Female,62,25.3,1597.94,Month-to-Month,Mailed,Low,5,0
+Male,22,23.67,1257.07,One year,Electronic,Medium,3,0
+Male,58,69.66,3082.5,Month-to-Month,Electronic,Low,5,1
+Female,58,47.79,3610.79,Month-to-Month,Mailed,Low,3,0
+Female,49,36.73,2101.7,Month-to-Month,Mailed,High,1,0
+Female,52,66.37,3459.72,Month-to-Month,Electronic,High,3,0
+Male,42,47.33,5336.02,Month-to-Month,Electronic,High,4,0
+Female,70,62.98,3384.66,One year,Mailed,High,4,1
+Male,15,56.81,4352.8,One year,Mailed,Medium,4,1
+Male,54,66.78,4851.36,Month-to-Month,Mailed,High,0,0
+Female,60,52.02,5933.5,Month-to-Month,Mailed,Medium,1,0
+Female,8,75.81,3658.86,Month-to-Month,Electronic,High,5,0
+Male,53,34.41,4860.42,One year,Mailed,Medium,5,0
+Male,60,75.72,5779.63,Month-to-Month,Mailed,Low,0,0
+Female,5,52.93,5672.02,One year,Electronic,Medium,3,1
+Female,68,89.95,932.38,One year,Mailed,Medium,0,0
+Female,6,61.22,2497.71,One year,Electronic,High,3,0
+Male,47,97.85,2011.54,Month-to-Month,Mailed,Medium,3,0
+Male,55,68.15,612.86,One year,Mailed,Low,2,1
+Male,40,37.91,3836.12,Month-to-Month,Electronic,Low,5,1
+Male,52,85.74,4441.84,One year,Electronic,High,4,1
+Male,16,47.61,5103.96,Month-to-Month,Mailed,Low,3,0
+Male,13,47.81,824.38,One year,Mailed,Medium,2,0
+Female,30,22.54,5271.02,Month-to-Month,Mailed,Low,5,1
+Male,19,63.9,3893.26,One year,Electronic,High,4,0
+Male,17,62.75,4253.28,Month-to-Month,Mailed,Medium,3,0
+Male,63,48.48,5472.68,Month-to-Month,Electronic,High,3,1
+Female,19,91.54,3786.09,Month-to-Month,Electronic,Medium,0,1
+Male,58,30.3,2081.61,Month-to-Month,Mailed,Low,0,0
+Male,55,46.41,4968.13,One year,Electronic,High,5,0
+Female,62,45.73,2242.05,One year,Mailed,High,4,0
+Male,23,27.38,301.95,Month-to-Month,Mailed,Medium,3,0
+Male,9,58.49,5000.86,One year,Mailed,High,5,0
+Male,12,75.02,2136.63,Month-to-Month,Mailed,Medium,5,1
+Male,1,60.93,4665.62,Month-to-Month,Mailed,Medium,1,1
+Male,58,32.56,2240.27,One year,Electronic,Medium,0,1
+Female,1,50.18,5180.3,Month-to-Month,Electronic,Medium,4,0
+Female,34,20.21,1395.11,Month-to-Month,Mailed,Low,3,1
+Female,48,89.46,5849.83,One year,Mailed,Medium,5,1
+Male,1,26.76,4700.58,Month-to-Month,Electronic,High,3,0
+Male,16,67.78,774.0,Month-to-Month,Electronic,Low,1,1
+Male,61,98.9,3438.08,Month-to-Month,Electronic,High,4,1
+Female,64,62.93,5913.67,Month-to-Month,Electronic,Low,5,0
+Male,63,93.92,2879.29,One year,Mailed,Medium,3,0
+Male,69,38.89,1174.43,One year,Mailed,Low,0,0
+Female,22,80.8,2960.19,One year,Electronic,Low,1,0
+Male,67,62.5,3123.5,Month-to-Month,Mailed,High,4,0
+Female,26,77.64,4475.95,Month-to-Month,Electronic,High,1,1
+Female,16,24.99,4223.19,One year,Mailed,Medium,0,0
+Female,51,31.82,2475.05,Month-to-Month,Electronic,Low,4,0
+Male,57,30.65,1386.34,Month-to-Month,Mailed,Low,1,0
+Male,29,74.97,3905.82,Month-to-Month,Electronic,Low,2,0
+Male,69,87.56,2588.05,Month-to-Month,Electronic,Medium,0,0
+Male,47,79.97,880.43,One year,Mailed,Medium,0,0
+Male,62,22.44,5413.38,One year,Electronic,Medium,0,0
+Male,69,89.38,4178.21,One year,Mailed,Medium,2,0
+Male,16,48.33,4130.78,Month-to-Month,Mailed,Medium,2,0
+Female,48,51.77,4953.24,One year,Electronic,High,3,0
+Male,39,28.39,3225.0,One year,Mailed,Low,5,1
+Female,33,78.99,4908.82,Month-to-Month,Mailed,Low,1,0
+Male,23,34.58,3038.74,Month-to-Month,Mailed,Low,3,1
+Male,10,65.12,496.33,One year,Mailed,Low,1,0
+Male,69,87.26,2490.96,One year,Mailed,Low,5,0
+Female,34,27.14,3035.04,One year,Electronic,Low,2,1
+Female,52,62.83,4349.2,One year,Mailed,Low,5,0
+Female,10,38.66,728.81,Month-to-Month,Mailed,Low,2,0
+Female,19,47.43,926.11,One year,Mailed,High,5,0
+Male,58,57.92,1655.73,One year,Mailed,Low,3,0
+Female,1,48.41,1672.34,Month-to-Month,Mailed,High,4,0
+Male,69,71.91,4419.89,One year,Electronic,Medium,3,0
+Male,4,58.37,1579.31,Month-to-Month,Mailed,Low,1,0
+Female,16,66.74,3835.28,Month-to-Month,Electronic,Medium,3,0
+Female,24,78.95,3016.22,Month-to-Month,Electronic,Medium,0,0
+Female,2,64.62,3482.44,One year,Electronic,Medium,1,1
+Female,32,66.92,5044.83,One year,Electronic,High,5,1
+Female,24,65.16,2485.85,Month-to-Month,Mailed,Medium,1,0
+Female,12,50.3,4648.38,One year,Electronic,Medium,4,1
+Female,50,47.0,2590.01,One year,Electronic,Medium,2,0
+Female,35,91.97,2187.84,Month-to-Month,Mailed,Low,5,0
+Male,33,68.6,5755.9,Month-to-Month,Mailed,Low,1,0
+Female,33,39.55,1187.79,One year,Mailed,High,5,1
+Female,61,59.86,632.99,Month-to-Month,Electronic,High,5,0
+Male,51,46.43,4648.82,One year,Mailed,Low,5,0
+Female,43,94.7,502.67,One year,Mailed,High,2,0
+Male,12,20.6,5038.77,One year,Electronic,Low,3,1
+Male,67,38.03,2679.44,One year,Mailed,Medium,5,1
+Female,65,49.23,5501.53,Month-to-Month,Mailed,Medium,0,1
+Male,33,59.02,4357.04,Month-to-Month,Mailed,High,4,0
+Male,40,88.07,3701.39,Month-to-Month,Mailed,Low,2,0
+Male,43,27.03,5700.91,Month-to-Month,Electronic,Low,1,0
+Male,44,84.47,2440.23,One year,Mailed,High,2,0
+Female,29,24.45,5729.11,One year,Mailed,Low,1,0
+Male,13,87.39,896.51,Month-to-Month,Electronic,Medium,2,0
+Female,12,24.13,2954.15,One year,Mailed,High,1,1
+Male,46,21.46,1692.48,One year,Electronic,High,5,1
+Male,2,75.76,3285.07,One year,Mailed,Low,3,1
+Male,35,99.78,1055.88,Month-to-Month,Electronic,High,1,1
+Male,8,91.73,5065.02,Month-to-Month,Electronic,Low,1,0
+Female,26,66.08,5093.81,Month-to-Month,Electronic,Low,0,0
+Female,34,93.39,5735.89,One year,Electronic,Low,1,1
+Male,7,20.42,1012.57,Month-to-Month,Mailed,Low,0,0
+Male,68,98.01,3777.66,Month-to-Month,Electronic,Low,4,1
+Female,58,59.26,2898.0,Month-to-Month,Mailed,High,5,0
+Male,29,77.83,2131.86,Month-to-Month,Electronic,Medium,0,0
+Male,36,85.67,2174.09,Month-to-Month,Electronic,Medium,3,0
+Male,21,77.48,2535.48,Month-to-Month,Electronic,High,5,1
+Female,36,62.8,4259.06,One year,Mailed,High,0,1
+Female,10,58.13,3629.89,One year,Electronic,Medium,5,0
+Female,24,87.09,2812.12,Month-to-Month,Mailed,Medium,5,1
+Male,64,36.41,548.01,Month-to-Month,Mailed,Medium,5,0
+Male,49,97.44,558.82,One year,Mailed,Medium,4,0
+Female,36,76.88,113.8,One year,Mailed,Medium,3,0
+Female,24,35.96,5809.43,Month-to-Month,Mailed,Low,2,0
+Female,23,78.9,131.0,Month-to-Month,Mailed,High,2,0
+Female,62,62.39,708.25,Month-to-Month,Mailed,Low,0,1
+Male,37,76.58,1956.12,Month-to-Month,Mailed,Medium,5,1
+Female,12,81.42,4863.84,One year,Mailed,Medium,0,0
+Male,55,26.98,5776.38,Month-to-Month,Electronic,Medium,4,0
+Female,13,60.49,4761.08,Month-to-Month,Electronic,Low,4,1
+Male,23,94.56,4174.31,Month-to-Month,Electronic,Low,1,1
+Female,30,45.65,3175.67,Month-to-Month,Electronic,Medium,4,1
+Female,17,67.51,611.56,One year,Electronic,Low,1,0
+Female,62,49.54,5753.21,One year,Mailed,Low,3,0
+Female,13,56.34,4574.52,One year,Mailed,Medium,0,0
+Male,59,63.89,3869.8,Month-to-Month,Mailed,Low,3,0
+Female,19,63.91,4578.31,Month-to-Month,Mailed,High,4,0
+Male,49,36.14,4372.21,One year,Mailed,High,3,1
+Male,12,74.77,3859.67,Month-to-Month,Mailed,High,3,0
+Male,61,27.03,5885.4,Month-to-Month,Mailed,High,3,0
+Male,19,31.11,5429.85,One year,Electronic,Medium,4,0
+Female,9,20.22,3915.32,One year,Electronic,Medium,5,0
+Male,71,29.34,4189.73,One year,Electronic,Medium,3,0
+Male,28,57.85,404.42,One year,Electronic,High,1,0
+Male,52,68.49,4052.51,Month-to-Month,Mailed,High,4,0
+Female,16,83.54,360.58,Month-to-Month,Mailed,Low,3,1
+Female,69,28.54,3570.76,One year,Mailed,Low,5,1
+Female,12,88.06,5996.19,Month-to-Month,Electronic,High,4,0
+Female,25,79.68,3379.26,One year,Mailed,High,2,0
+Male,52,52.68,2891.94,One year,Mailed,High,5,1
+Male,53,94.64,1945.84,Month-to-Month,Mailed,High,1,0
+Female,23,99.27,811.08,One year,Electronic,Low,3,0

@@ -1,0 +1,22 @@
+[
+  {
+    "cluster": "A",
+    "arpu": 120,
+    "complaints": 80
+  },
+  {
+    "cluster": "B",
+    "arpu": 90,
+    "complaints": 60
+  },
+  {
+    "cluster": "C",
+    "arpu": 40,
+    "complaints": 30
+  },
+  {
+    "cluster": "D",
+    "arpu": 70,
+    "complaints": 50
+  }
+]

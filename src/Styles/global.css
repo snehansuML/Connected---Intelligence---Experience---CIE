@@ -1,0 +1,108 @@
+/* === Global Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* === Base Typography === */
+  body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #000;
+    line-height: 1.6;
+  }
+  
+  /* === Layout === */
+  .dashboard-grid {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  /* === Topbar === */
+  .topbar {
+    background-color: #d6ecff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    
+    border-bottom: 1px solid #bbb;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .topbar .logo {
+    height: 60px;
+  }
+  
+  .topbar-buttons button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #1976d2;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .topbar-buttons button:hover {
+    background-color: #d0e8ff;
+  }
+  
+  /* === Chart Cards & UI Blocks === */
+  .chart-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+  }
+  
+  /* === Charts Grid === */
+  .charts-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* === Form Inputs === */
+  input[type="text"],
+  input[type="password"],
+  input[type="file"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+  
+  /* === Buttons === */
+  button {
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

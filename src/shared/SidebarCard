@@ -1,0 +1,29 @@
+import React from "react";
+
+export default function SidebarCard({ title, value, isCurrency }) {
+  // Format the value as currency or regular number
+  const formatValue = () => {
+    if (isCurrency) return `$${Number(value).toLocaleString()}`;
+    return Number(value).toLocaleString();
+  };
+
+  return (
+    <div
+      style={{
+        backgroundColor: "#ffffff",
+        marginBottom: "1rem",
+        padding: "1rem",
+        borderRadius: "10px",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
+        textAlign: "center",
+        transition: "0.2s ease",
+        borderLeft: "5px solid #0f62fe"
+      }}
+    >
+      <h4 style={{ fontSize: "1rem", marginBottom: "0.5rem", color: "#333" }}>{title}</h4>
+      <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#0f62fe" }}>
+        {formatValue()}
+      </div>
+    </div>
+  );
+}

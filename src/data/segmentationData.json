@@ -1,0 +1,44 @@
+{
+  "payment_method": [
+    { "name": "Credit Card", "value": 35 },
+    { "name": "Debit Card", "value": 25 },
+    { "name": "Bank Transfer", "value": 15 },
+    { "name": "Mobile Wallet", "value": 15 },
+    { "name": "Cash", "value": 10 }
+  ],
+  "demographics": [
+    { "name": "18-25", "value": 15 },
+    { "name": "26-40", "value": 40 },
+    { "name": "41-60", "value": 30 },
+    { "name": "60+", "value": 15 }
+  ],
+  "gender": [
+    { "name": "Male", "value": 52 },
+    { "name": "Female", "value": 48 }
+  ],
+  "location": [
+    { "name": "Urban", "value": 60 },
+    { "name": "Rural", "value": 40 }
+  ],
+  "spending": [
+    { "name": "High ARPU", "value": 25 },
+    { "name": "Mid ARPU", "value": 45 },
+    { "name": "Low ARPU", "value": 30 }
+  ],
+  "plans": [
+    { "name": "Internet", "value": 50 },
+    { "name": "Phone", "value": 30 },
+    { "name": "TV", "value": 20 }
+  ],
+  "behavior": [
+    { "name": "High Usage", "value": 40 },
+    { "name": "Frequent Complaints", "value": 30 },
+    { "name": "Short Tenure", "value": 30 }
+  ],
+  "clusters": [
+    { "name": "Cluster A", "value": 35 },
+    { "name": "Cluster B", "value": 25 },
+    { "name": "Cluster C", "value": 20 },
+    { "name": "Cluster D", "value": 20 }
+  ]
+}
