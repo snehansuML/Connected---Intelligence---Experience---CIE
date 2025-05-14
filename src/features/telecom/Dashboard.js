@@ -12,7 +12,7 @@ import MarketingInsights from "./components/MarketingInsights";
 import MarketSimulations from "./components/MarketSimulations";
 
 export default function Dashboard() {
-  const [activeView, setActiveView] = useState("Marketing Insights");
+  const [activeView, setActiveView] = useState("Customer Segments");
   const [riskData, setRiskData] = useState({});
   const [segmentationData, setSegmentationData] = useState({});
 
