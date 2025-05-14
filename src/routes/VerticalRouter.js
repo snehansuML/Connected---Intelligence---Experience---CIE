@@ -1,11 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Route } from "react-router-dom";
+
 
 // Import vertical dashboards
 import TelecomDashboard from "../features/telecom/Dashboard";
 // Future verticals (add as needed)
 import BankingDashboard from "../features/banking/Dashboard";
 import RetailDashboard from "../features/retail/Dashboard";
+
+import MarketSimulations
+  from "../features/telecom/components/MarketSimulations";
+
+
+<Route path="/market-simulations" element={<MarketSimulations />} />
 
 export default function VerticalRouter() {
   const { vertical } = useParams();

@@ -9,6 +9,7 @@ import BatchPrediction from "./components/BatchPrediction";
 import ChurnMap from "./components/ChurnMap";
 import ChartBuilder from "./components/ChartBuilder";
 import MarketingInsights from "./components/MarketingInsights";
+import MarketSimulations from "./components/MarketSimulations";
 
 export default function Dashboard() {
   const [activeView, setActiveView] = useState("Marketing Insights");
@@ -136,18 +137,18 @@ useEffect(() => {
           )}
 
 {activeView === "Customer Segments" && (
-            <>
-              <h3 style={{ marginBottom: "1rem", fontWeight: "bold" }}>Customer Segments</h3>
-              {Object.entries(telecomConfig.chartConfigs.segments).map(([key, config], index) => (
-                <ChartCard
-                  key={index}
-                  title={config.title}
-                  data={segmentationData[key]}
-                  barColor={config.color}
-                />
-              ))}
-            </>
-          )}
+  <>
+    <h3 style={{ marginBottom: "1rem", fontWeight: "bold" }}>Customer Segments</h3>
+    {Object.entries(telecomConfig.chartConfigs.segments).map(([key, config], index) => (
+      <ChartCard
+        key={index}
+        title={config.title}
+        data={segmentationData[key]}
+        barColor={config.color}
+      />
+    ))}
+  </>
+)}
 
           {activeView === "Marketing Insights" && <MarketingInsights />}
           {activeView === "Batch Prediction" && (
@@ -156,6 +157,12 @@ useEffect(() => {
               <BatchPrediction />
             </div>
           )}
+          {activeView === "Market Simulations" && (
+  <MarketSimulations />
+)}
+
+
+
           {activeView === "Chart Builder" && <ChartBuilder />}
         </main>
       </div>

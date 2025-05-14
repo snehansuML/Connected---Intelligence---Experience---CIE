@@ -1,5 +1,7 @@
 
 import React, { useEffect, useState } from "react";
+import CLTVDashboard from "./CLTVDashboard";
+
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, LineChart, Line
 } from "recharts";
@@ -86,6 +88,12 @@ export default function MarketingInsights() {
           <Bar dataKey="acquired_pct" fill="#4CAF50" name="Acquired (%)" />
           <Bar dataKey="churned_pct" fill="#F44336" name="Churned (%)" />
         </BarChart>
+
+        {/* CLTV Dashboard */}
+<div className="mt-8">
+  <CLTVDashboard />
+</div>
+
       </ResponsiveContainer>
     </div>
   );

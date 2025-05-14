@@ -69,31 +69,38 @@
     }
   ],
   "segment_performance": [
-    {
-      "customer_segment": "Budget",
-      "acquired_pct": 60,
-      "churned_pct": 22,
-      "retention_rate_pct": 58,
-      "engagement_score": 40,
-      "discount_usage_pct": 50
-    },
-    {
-      "customer_segment": "Premium",
-      "acquired_pct": 30,
-      "churned_pct": 5,
-      "retention_rate_pct": 85,
-      "engagement_score": 88,
-      "discount_usage_pct": 8
-    },
-    {
-      "customer_segment": "Loyal",
-      "acquired_pct": 25,
-      "churned_pct": 3,
-      "retention_rate_pct": 90,
-      "engagement_score": 95,
-      "discount_usage_pct": 5
-    }
-  ],
+  {
+    "customer_segment": "Budget",
+    "acquired_pct": 60,
+    "churned_pct": 22,
+    "retention_rate_pct": 58,
+    "engagement_score": 40,
+    "discount_usage_pct": 50,
+    "avg_arpu": 25,
+    "avg_tenure_months": 6
+  },
+  {
+    "customer_segment": "Premium",
+    "acquired_pct": 30,
+    "churned_pct": 5,
+    "retention_rate_pct": 85,
+    "engagement_score": 88,
+    "discount_usage_pct": 8,
+    "avg_arpu": 90,
+    "avg_tenure_months": 24
+  },
+  {
+    "customer_segment": "Loyal",
+    "acquired_pct": 25,
+    "churned_pct": 3,
+    "retention_rate_pct": 90,
+    "engagement_score": 95,
+    "discount_usage_pct": 5,
+    "avg_arpu": 75,
+    "avg_tenure_months": 30
+  }
+]
+,
   "payment_channel_performance": [
     {
       "payment_channel": "Credit Card",
