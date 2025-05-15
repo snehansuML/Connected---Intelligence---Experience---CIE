@@ -49,8 +49,25 @@ useEffect(() => {
     "Device Risk": "#455A64"
   };
 
-  const additionalTabs = ["Market Simulations","Batch Prediction", "Chart Builder", "Marketing Insights"];
-
+  //const additionalTabs = ["Market Simulations","Batch Prediction", "Chart Builder", "Marketing Insights"];
+  {telecomConfig.topbarButtons.map((btn, index) => (
+    <button
+      key={index}
+      onClick={() => setActiveView(btn)}
+      style={{
+        backgroundColor: activeView === btn ? "#ffd699" : "#fb8c00",
+        color: "white",
+        padding: "0.5rem 1rem",
+        border: "none",
+        borderRadius: "4px",
+        fontWeight: "bold",
+        cursor: "pointer"
+      }}
+    >
+      {btn}
+    </button>
+  ))}
+  
   return (
     <div style={{ display: "flex", minHeight: "100vh", backgroundColor: "#f4f6f8" }}>
       <aside style={{ width: "260px", backgroundColor: "#fff", padding: "1rem", boxShadow: "2px 0 8px rgba(0,0,0,0.05)" }}>
@@ -71,7 +88,7 @@ useEffect(() => {
             <h1 style={{ fontSize: "1.5rem" }}>{telecomConfig.appTitle}</h1>
           </div>
           <div style={{ display: "flex", gap: "0.5rem" }}>
-            {[...telecomConfig.topbarButtons, ...additionalTabs].map((btn, index) => (
+            {[...telecomConfig.topbarButtons].map((btn, index) => (
               <button
                 key={index}
                 onClick={() => setActiveView(btn)}
