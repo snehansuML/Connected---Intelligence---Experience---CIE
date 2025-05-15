@@ -20,35 +20,35 @@ export default function MarketSimulations() {
   const [previousResults, setPreviousResults] = useState(null);
 
   useEffect(() => {
-    const churnRate =
-      18 -
-      inputs.engagementScore * 0.03 -
-      inputs.discount * 0.5 - inputs.tenure * 0.3 +
-      (inputs.riskLevel === "High"
-        ? 4
-        : inputs.riskLevel === "Medium"
-        ? 2
-        : 0) +
-        (inputs.customerSegment === "Premium"
-            ? 4
-            : inputs.customerSegment === "Budget"
-            ? 2
-            : 0);
-
-    const revenue = inputs.monthlyCharges * (1 - churnRate / 100);
+    // Step 1: Compute z (logistic regression input)
+    const z =
+    0.700 + // intercept
+    inputs.monthlyCharges * 0.048 +
+    inputs.tenure * -0.140 +
+    inputs.engagementScore * -0.020 +
+    inputs.discount * -0.110 +
+    (inputs.riskLevel === "Medium" ? -0.506 : inputs.riskLevel === "Low" ? -1.377 : 0) +
+    (inputs.customerSegment === "Premium" ? -0.995 : inputs.customerSegment === "Loyal" ? -1.825 : 0); // Budget is baseline
+    
+  
+    // Step 2: Apply logistic function to get churn rate [0–1]
+    const churnRate = 1 / (1 + Math.exp(-z));
+  
+    // Step 3: Derived metrics
+    const revenue = inputs.monthlyCharges * (1 - churnRate);
     const cltv = inputs.monthlyCharges * inputs.tenure;
-    const retention = 100 - churnRate;
-
+    const retention = (1 - churnRate) * 100;
+  
+    // Step 4: Update state
     setPreviousResults(results);
-
     setResults({
-      churnRate: churnRate.toFixed(1),
+      churnRate: (churnRate * 100).toFixed(1),
       revenue: revenue.toLocaleString(undefined, { maximumFractionDigits: 0 }),
       cltv: cltv.toLocaleString(undefined, { maximumFractionDigits: 0 }),
       retention: retention.toFixed(1)
     });
   }, [inputs]);
-
+  
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f0f2f5" }}>
       {/* Blue banner */}
