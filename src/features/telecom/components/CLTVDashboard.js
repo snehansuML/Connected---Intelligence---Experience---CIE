@@ -52,16 +52,22 @@ export default function CLTVDashboard() {
       </div>
 
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={cltvData} layout="vertical" margin={{ left: 80 }}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis type="number" />
-          <YAxis dataKey="segment" type="category" />
-          <Tooltip />
-          <Bar dataKey="cltv" fill="#1976d2">
-            <LabelList dataKey="cltv" position="right" />
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+  <BarChart data={cltvData} layout="vertical" margin={{ left: 80 }}>
+    <CartesianGrid strokeDasharray="3 3" />
+    <XAxis type="number" />
+    <YAxis dataKey="segment" type="category" />
+    <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
+    <Bar dataKey="cltv" fill="#1976d2">
+      <LabelList
+        dataKey="cltv"
+        position="right"
+        formatter={(value) => `$${value.toLocaleString()}`}
+      />
+    </Bar>
+  </BarChart>
+</ResponsiveContainer>
+
+
     </div>
   );
 }
