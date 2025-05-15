@@ -118,5 +118,20 @@
       "name": "New Setup",
       "value": 5
     }
-  ]
+  ],
+  "ARPU Risk": [
+  {
+    "name": "Low ARPU (<$30)",
+    "value": 35
+  },
+  {
+    "name": "Mid ARPU ($30-$70)",
+    "value": 45
+  },
+  {
+    "name": "High ARPU (>$70)",
+    "value": 20
+  }
+]
+
 }

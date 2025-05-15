@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { DndContext, useDraggable, useDroppable } from "@dnd-kit/core";
 import {
@@ -66,7 +65,7 @@ function DropZone({ id, label, value }) {
 }
 
 export default function ChartBuilder() {
-  const [selectedMetric, setSelectedMetric] = useState(null);
+  const [selectedMetrics, setSelectedMetrics] = useState([]);
   const [selectedDimension, setSelectedDimension] = useState(null);
   const [sampleData, setSampleData] = useState(null);
   const [chartType, setChartType] = useState("bar");
@@ -82,41 +81,35 @@ export default function ChartBuilder() {
   const handleDragEnd = (event) => {
     const { over, active } = event;
     if (!over) return;
-    if (over.id === "drop-metric") setSelectedMetric(active.id);
+    if (over.id === "drop-metric") {
+      setSelectedMetrics((prev) =>
+        prev.includes(active.id) ? prev : [...prev, active.id]
+      );
+    }
     if (over.id === "drop-dimension") {
       setSelectedDimension(active.id);
-      setFilterValue(null); // reset filter when dimension changes
+      setFilterValue(null);
     }
   };
 
   let rawData = [];
   if (sampleData && selectedDimension) {
     switch (selectedDimension) {
-      case "channel":
-        rawData = sampleData.channel_performance;
-        break;
-      case "campaign":
-        rawData = sampleData.campaign_effectiveness;
-        break;
-      case "customer_segment":
-        rawData = sampleData.segment_performance;
-        break;
-      case "payment_channel":
-        rawData = sampleData.payment_channel_performance;
-        break;
-      case "region":
-        rawData = sampleData.region_performance;
-        break;
-      default:
-        rawData = [];
+      case "channel": rawData = sampleData.channel_performance; break;
+      case "campaign": rawData = sampleData.campaign_effectiveness; break;
+      case "customer_segment": rawData = sampleData.segment_performance; break;
+      case "payment_channel": rawData = sampleData.payment_channel_performance; break;
+      case "region": rawData = sampleData.region_performance; break;
+      default: rawData = [];
     }
   }
 
   const dimensionValues = Array.from(new Set(rawData.map(row => row[selectedDimension])));
-
   const chartData = rawData.filter(row =>
     filterValue ? row[selectedDimension] === filterValue : true
   );
+
+  const chartColors = ["#FB8C00", "#42A5F5", "#66BB6A", "#AB47BC"];
 
   return (
     <DndContext onDragEnd={handleDragEnd}>
@@ -134,8 +127,16 @@ export default function ChartBuilder() {
         </div>
 
         <div style={{ flex: 1, padding: "2rem" }}>
-          <DropZone id="drop-metric" label="📉 Drop Metric Here" value={selectedMetric} />
-          <DropZone id="drop-dimension" label="📊 Drop Dimension Here" value={selectedDimension} />
+          <DropZone
+            id="drop-metric"
+            label="📉 Drop Metrics Here"
+            value={selectedMetrics.length > 0 ? selectedMetrics.join(", ") : "None"}
+          />
+          <DropZone
+            id="drop-dimension"
+            label="📊 Drop Dimension Here"
+            value={selectedDimension || "None"}
+          />
 
           {selectedDimension && dimensionValues.length > 1 && (
             <div style={{ marginBottom: "1rem" }}>
@@ -161,7 +162,7 @@ export default function ChartBuilder() {
             </select>
           </div>
 
-          {selectedMetric && selectedDimension && chartData.length > 0 && (
+          {selectedMetrics.length > 0 && selectedDimension && chartData.length > 0 && (
             <>
               <h4>📈 Chart Preview</h4>
               <ResponsiveContainer width="100%" height={300}>
@@ -171,7 +172,9 @@ export default function ChartBuilder() {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey={selectedMetric} fill="#FB8C00" />
+                    {selectedMetrics.map((metric, i) => (
+                      <Bar key={metric} dataKey={metric} fill={chartColors[i % chartColors.length]} />
+                    ))}
                   </BarChart>
                 )}
                 {chartType === "line" && (
@@ -180,14 +183,21 @@ export default function ChartBuilder() {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey={selectedMetric} stroke="#FB8C00" />
+                    {selectedMetrics.map((metric, i) => (
+                      <Line
+                        key={metric}
+                        type="monotone"
+                        dataKey={metric}
+                        stroke={chartColors[i % chartColors.length]}
+                      />
+                    ))}
                   </LineChart>
                 )}
-                {chartType === "pie" && (
+                {chartType === "pie" && selectedMetrics.length === 1 && (
                   <PieChart>
                     <Pie
                       data={chartData}
-                      dataKey={selectedMetric}
+                      dataKey={selectedMetrics[0]}
                       nameKey={selectedDimension}
                       cx="50%"
                       cy="50%"

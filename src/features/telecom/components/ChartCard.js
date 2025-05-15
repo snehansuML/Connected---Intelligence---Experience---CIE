@@ -17,9 +17,13 @@ function ChartCard({ title, data, barColor = "#42A5F5" }) {
         <BarChart data={data} layout="vertical">
           <XAxis type="number" />
           <YAxis dataKey="name" type="category" width={100} />
-          <Tooltip />
+          <Tooltip formatter={(value) => `${value}%`} />
           <Bar dataKey="value" fill={barColor}>
-            <LabelList dataKey="value" position="right" />
+            <LabelList
+              dataKey="value"
+              position="right"
+              formatter={(value) => `${value}%`}
+            />
           </Bar>
         </BarChart>
       </ResponsiveContainer>

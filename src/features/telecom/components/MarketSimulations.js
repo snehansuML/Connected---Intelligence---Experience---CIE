@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import simulationModel from "../../../config/telecom/simulationModel";
 
 export default function MarketSimulations() {
   const [inputs, setInputs] = useState({
@@ -20,42 +21,43 @@ export default function MarketSimulations() {
   const [previousResults, setPreviousResults] = useState(null);
 
   useEffect(() => {
-    // Step 1: Compute z (logistic regression input)
-    const z =
-    0.700 + // intercept
-    inputs.monthlyCharges * 0.048 +
-    inputs.tenure * -0.140 +
-    inputs.engagementScore * -0.020 +
-    inputs.discount * -0.110 +
-    (inputs.riskLevel === "Medium" ? -0.506 : inputs.riskLevel === "Low" ? -1.377 : 0) +
-    (inputs.customerSegment === "Premium" ? -0.995 : inputs.customerSegment === "Loyal" ? -1.825 : 0); // Budget is baseline
-    
+    let z = simulationModel.intercept;
   
-    // Step 2: Apply logistic function to get churn rate [0–1]
+    // Apply numeric coefficients
+    Object.entries(simulationModel.coefficients).forEach(([key, weight]) => {
+      z += inputs[key] * weight;
+    });
+  
+    // Apply categorical adjustments
+    Object.entries(simulationModel.categoricalAdjustments).forEach(([field, map]) => {
+      const value = inputs[field];
+      if (map && map[value] !== undefined) {
+        z += map[value];
+      }
+    });
+  
     const churnRate = 1 / (1 + Math.exp(-z));
-  
-    // Step 3: Derived metrics
+    const churnPercent = (churnRate * 100).toFixed(1);
     const revenue = inputs.monthlyCharges * (1 - churnRate);
     const cltv = inputs.monthlyCharges * inputs.tenure;
     const retention = (1 - churnRate) * 100;
   
-    // Step 4: Update state
     setPreviousResults(results);
     setResults({
-      churnRate: (churnRate * 100).toFixed(1),
+      churnRate: churnPercent,
       revenue: revenue.toLocaleString(undefined, { maximumFractionDigits: 0 }),
       cltv: cltv.toLocaleString(undefined, { maximumFractionDigits: 0 }),
       retention: retention.toFixed(1)
     });
   }, [inputs]);
-  
+   
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f0f2f5" }}>
       {/* Blue banner */}
       <div style={{ backgroundColor: "#003366", color: "#fff", padding: "1rem 2rem" }}>
         <h2 style={{ fontSize: "2rem", fontWeight: "bold" }}>Market Simulations</h2>
       </div>
-
+  
       {/* Two-column layout */}
       <div style={{ display: "flex", gap: "2rem", padding: "2rem" }}>
         {/* Left Panel – Inputs */}
@@ -69,7 +71,7 @@ export default function MarketSimulations() {
           }}
         >
           <h3 style={{ fontWeight: "bold", marginBottom: "1rem" }}>Inputs</h3>
-
+  
           <label>Customer Segment</label>
           <select
             value={inputs.customerSegment}
@@ -82,77 +84,59 @@ export default function MarketSimulations() {
             <option>Premium</option>
             <option>Loyal</option>
           </select>
-
-          <label>
-            Monthly Charges: <strong>${inputs.monthlyCharges}</strong>
-          </label>
+  
+          <label>Monthly Charges: <strong>${inputs.monthlyCharges}</strong></label>
           <input
             type="range"
             min={20}
             max={100}
             value={inputs.monthlyCharges}
-            onChange={(e) =>
-              setInputs({ ...inputs, monthlyCharges: +e.target.value })
-            }
-            style={{ width: "100%" }}
+            onChange={(e) => setInputs({ ...inputs, monthlyCharges: +e.target.value })}
+            style={{ width: "100%", accentColor: "#1976d2" }}
           />
-
-          <label>
-            Tenure (months): <strong>{inputs.tenure}</strong>
-          </label>
+  
+          <label>Tenure (months): <strong>{inputs.tenure}</strong></label>
           <input
             type="range"
             min={1}
             max={36}
             value={inputs.tenure}
-            onChange={(e) =>
-              setInputs({ ...inputs, tenure: +e.target.value })
-            }
-            style={{ width: "100%" }}
+            onChange={(e) => setInputs({ ...inputs, tenure: +e.target.value })}
+            style={{ width: "100%", accentColor: "#1976d2" }}
           />
-
+  
           <label>Risk Level</label>
           <select
             value={inputs.riskLevel}
-            onChange={(e) =>
-              setInputs({ ...inputs, riskLevel: e.target.value })
-            }
+            onChange={(e) => setInputs({ ...inputs, riskLevel: e.target.value })}
             style={{ width: "100%", padding: "0.5rem", marginBottom: "1rem" }}
           >
             <option>Low</option>
             <option>Medium</option>
             <option>High</option>
           </select>
-
-          <label>
-            Engagement Score: <strong>{inputs.engagementScore}</strong>
-          </label>
+  
+          <label>Engagement Score: <strong>{inputs.engagementScore}</strong></label>
           <input
             type="range"
             min={0}
             max={100}
             value={inputs.engagementScore}
-            onChange={(e) =>
-              setInputs({ ...inputs, engagementScore: +e.target.value })
-            }
-            style={{ width: "100%" }}
+            onChange={(e) => setInputs({ ...inputs, engagementScore: +e.target.value })}
+            style={{ width: "100%", accentColor: "#1976d2" }}
           />
-
-          <label>
-            Discount Offered: <strong>{inputs.discount}%</strong>
-          </label>
+  
+          <label>Discount Offered: <strong>{inputs.discount}%</strong></label>
           <input
             type="range"
             min={0}
             max={30}
             value={inputs.discount}
-            onChange={(e) =>
-              setInputs({ ...inputs, discount: +e.target.value })
-            }
-            style={{ width: "100%" }}
+            onChange={(e) => setInputs({ ...inputs, discount: +e.target.value })}
+            style={{ width: "100%", accentColor: "#1976d2" }}
           />
         </div>
-
+  
         {/* Right Panel – Results */}
         <div style={{ flex: 2, display: "flex", flexDirection: "column", gap: "1rem" }}>
           {[
@@ -163,7 +147,7 @@ export default function MarketSimulations() {
           ].map((item, i) => {
             const current = results[item.key];
             const previous = previousResults?.[item.key];
-
+  
             const getDeltaDisplay = (current, previous, isPercent = false) => {
               if (!previous) return null;
               const curr = parseFloat(current.toString().replace(/,/g, ""));
@@ -176,9 +160,9 @@ export default function MarketSimulations() {
                 : Math.abs(delta).toLocaleString();
               return { arrow, color, formatted };
             };
-
+  
             const delta = getDeltaDisplay(current, previous, item.isPercent);
-
+  
             return (
               <div
                 key={i}
@@ -205,6 +189,7 @@ export default function MarketSimulations() {
           })}
         </div>
       </div>
-    </div>
-  );
-}
+    </div> // ✅ closing main wrapper div
+  ); // ✅ closing return
+  }; // ✅ closing component
+  
