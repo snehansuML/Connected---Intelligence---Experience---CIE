@@ -13,6 +13,7 @@ import MarketSimulations from "./components/MarketSimulations";
 import NBARecommendation from "./components/NBARecommendation";
 
 
+
 export default function Dashboard() {
   const [activeView, setActiveView] = useState("Customer Segments");
   const [riskData, setRiskData] = useState({});

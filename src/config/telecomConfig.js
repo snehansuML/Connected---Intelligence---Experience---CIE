@@ -4,12 +4,15 @@ const telecomConfig = {
 
   // Sidebar metrics
   sidebar: [
-    { title: "Customer Churn", key: "customerChurn", isCurrency: false },
+    { title: "Active Customers", key: "activeCustomers", isCurrency: false },
+    { title: "Monthly Customer Churn", key: "customerChurn", isCurrency: false },
     { title: "Yearly Charges", key: "yearlyCharges", isCurrency: true },
     { title: "Monthly Charges", key: "monthlyCharges", isCurrency: true },
     { title: "Admin Tickets", key: "adminTickets", isCurrency: false },
     { title: "Tech Tickets", key: "techTickets", isCurrency: false }
+     // ✅ NEW LINE
   ],
+  
 
   // Topbar navigation buttons
   topbarButtons: [

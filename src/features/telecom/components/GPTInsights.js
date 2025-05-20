@@ -9,7 +9,7 @@ export default function GPTInsights() {
   const [loading, setLoading] = useState(false);
   const [customerData, setCustomerData] = useState([]);
 
-  // Load real customer dataset once
+  // Load customer dataset
   useEffect(() => {
     fetch("/data/telecom_customers_with_clusters.json")
       .then(res => res.json())
@@ -35,10 +35,10 @@ export default function GPTInsights() {
     try {
       const reply = await askChatGPT(question, customerData);
       console.log("LLM Reply:", reply);
-      setResponse(reply || "No response from LLM,.");
+      setResponse(reply || "No response from LLM.");
     } catch (err) {
-      console.error("LLM, error:", err);
-      setResponse("❌ Error reaching LLM, backend.");
+      console.error("LLM error:", err);
+      setResponse("❌ Error reaching LLM backend.");
     } finally {
       setLoading(false);
     }
@@ -46,7 +46,7 @@ export default function GPTInsights() {
 
   const downloadPDF = () => {
     const doc = new jsPDF();
-    doc.text("LLM, Response:", 10, 10);
+    doc.text("LLM Response:", 10, 10);
     const splitText = doc.splitTextToSize(response, 180);
     doc.text(splitText, 10, 20);
     doc.save("chat_response.pdf");
@@ -69,6 +69,22 @@ export default function GPTInsights() {
           border: "1px solid #ccc"
         }}
       />
+
+      {/* Download Prompts.txt link */}
+      <div style={{ marginBottom: "1rem" }}>
+        <a
+          href="/Prompts.txt"
+          download
+          style={{
+            fontSize: "0.9rem",
+            color: "#1976d2",
+            textDecoration: "underline",
+            cursor: "pointer"
+          }}
+        >
+          📄 Download Sample Prompts (Prompts.txt)
+        </a>
+      </div>
 
       <button
         onClick={handleChat}

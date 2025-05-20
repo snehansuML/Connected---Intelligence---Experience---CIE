@@ -1,0 +1,40 @@
+🧠 General Churn Analysis
+“Which customer segments have the highest churn rate?”
+
+“Why is churn high in Prepaid plans?”
+
+“What are the top reasons for churn in rural regions?”
+
+📊 Comparative Insights
+“Compare acquisition vs churn across different channels.”
+
+“How does engagement score impact churn?”
+
+“What’s the difference in churn rate between loyal and budget segments?”
+
+📍 Segment Deep Dives
+“Show churn behavior for customers using bank transfers.”
+
+“What retention strategies work best for SMS users?”
+
+“How does churn differ across payment methods?”
+
+📈 Trend & Time Analysis (if applicable)
+“How has churn evolved over the last 6 months?”
+
+“What months show the highest churn and why?”
+
+📣 Campaign & Marketing Performance
+“Which campaign had the best retention rate?”
+
+“Which marketing channel delivers the lowest churn?”
+
+“How effective was the Referral Program in reducing churn?”
+
+🧩 Strategic Guidance
+“Based on the data, what 3 actions can reduce churn by 10%?”
+
+“Which combination of segment + service has highest risk?”
+
+“What is the best strategy for retaining high-risk customers?”
+

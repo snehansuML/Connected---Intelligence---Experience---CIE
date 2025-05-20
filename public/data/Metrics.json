@@ -3,5 +3,6 @@
   "yearlyCharges": 16060000,
   "monthlyCharges": 456120,
   "adminTickets": 3632,
-  "techTickets": 2955
+  "techTickets": 2955,
+  "activeCustomers": 12475   
 }
