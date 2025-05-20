@@ -9,11 +9,10 @@ import TelecomDashboard from "../features/telecom/Dashboard";
 import BankingDashboard from "../features/banking/Dashboard";
 import RetailDashboard from "../features/retail/Dashboard";
 
-import MarketSimulations
-  from "../features/telecom/components/MarketSimulations";
+import MarketSimulations from "../features/telecom/components/MarketSimulations";
+import NBARecommendation from "../features/telecom/components/NBARecommendation";
 
 
-<Route path="/market-simulations" element={<MarketSimulations />} />
 
 export default function VerticalRouter() {
   const { vertical } = useParams();

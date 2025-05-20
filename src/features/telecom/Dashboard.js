@@ -10,6 +10,7 @@ import ChurnMap from "./components/ChurnMap";
 import ChartBuilder from "./components/ChartBuilder";
 import MarketingInsights from "./components/MarketingInsights";
 import MarketSimulations from "./components/MarketSimulations";
+import NBARecommendation from "./components/NBARecommendation";
 
 
 export default function Dashboard() {
@@ -179,7 +180,7 @@ useEffect(() => {
   <MarketSimulations />
 )}
 
-
+{activeView === "Next Best Action" && <NBARecommendation />}
 
           {activeView === "Chart Builder" && <ChartBuilder />}
         </main>

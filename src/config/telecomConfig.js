@@ -18,6 +18,7 @@ const telecomConfig = {
     "Customer Risk",
     "Marketing Insights",
     "Market Simulations",
+    "Next Best Action",
     "LLM Insights" ,
     "Chart Builder",
     "Batch Prediction"    
