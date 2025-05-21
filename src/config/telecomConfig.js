@@ -75,10 +75,12 @@ const telecomConfig = {
         title: "Behavioral Segments",
         color: "#F4511E"
       },
+      /*
       clusters: {
         title: "Cluster Groups (ML)",
         color: "#6D4C41"
       }
+        */
 
     }
   }
