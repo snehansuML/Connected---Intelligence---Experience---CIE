@@ -1,8 +1,8 @@
 {
-  "customerChurn": 1869,
-  "yearlyCharges": 16060000,
-  "monthlyCharges": 456120,
-  "adminTickets": 3632,
-  "techTickets": 2955,
-  "activeCustomers": 12475   
+  "customerChurn": 18500,             
+  "yearlyCharges": 220000000,         
+  "monthlyCharges": 18300000,         
+  "adminTickets": 32000,              
+  "techTickets": 26000,               
+  "activeCustomers": 610000           
 }
