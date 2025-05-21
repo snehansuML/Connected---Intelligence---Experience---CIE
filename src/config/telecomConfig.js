@@ -23,8 +23,8 @@ const telecomConfig = {
     "Market Simulations",
     "Next Best Action",
     "LLM Insights" ,
-    "Chart Builder",
-    "Batch Prediction"    
+    "Chart Builder"
+    //"Batch Prediction"    
     
   ],
 
